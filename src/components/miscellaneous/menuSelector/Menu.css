@@ -1,0 +1,91 @@
+.menu{
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container{
+    min-width: 20rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.23); */
+}
+/* 
+.menu-container::after{
+    content: '';
+    position: relative;
+    min-width: 20rem;
+    height: 0.5rem;
+    top: 1.7rem;
+    background-color: #287bff;
+} */
+
+.menu-ulist{
+    display: flex;
+    position: fixed;
+    /* background: #287bff; */
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.menu-ulist li{
+    position: relative;
+    list-style: none;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.menu-ulist li:hover{
+    color: white;
+}
+
+.menu-ulist li.active:hover{
+    color: black;
+}
+
+
+/* ------------------ */
+
+.menu-ulist li.active{
+    background-color: white;
+}
+
+.menu-ulist li.active::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    left: -1rem;
+    top: 0.1px;
+    border-top-right-radius: 1rem;
+    box-shadow: 0.3rem -0.3rem 0 0.2rem white;
+}
+
+.menu-ulist li.active::after{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    right: -1rem;
+    top: 0.1px;
+    border-top-left-radius: 1rem;
+    box-shadow: -0.3rem -0.3rem 0 0.2rem white;
+}
+
+
+.menu-icon{
+    position: relative;
+    display: block;
+    min-width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
